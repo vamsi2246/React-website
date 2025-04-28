@@ -28,58 +28,57 @@ const CurrencyConverter = () => {
     setResult(converted.toFixed(2));
   };
 
-  return (
+return (
     <div className="flex flex-col items-center p-8 bg-gray-100 min-h-screen">
 
-      <nav className="w-full bg-blue-600 text-white p-4 shadow-md">
-        <div className="container mx-auto flex justify-between items-center">
-      <h1 className="text-xl font-bold">Currency Converter</h1>
-      <ul className="flex gap-4">
-            <li><a href="#home" className="hover:underline">Home</a></li>
-            <li><a href="#about" className="hover:underline">About</a></li>
-            <li><a href="#contact" className="hover:underline">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
+        <nav className="w-full bg-blue-600 text-white p-4 shadow-md">
+            <div className="container mx-auto flex justify-between items-center">
+                <h1 className="text-xl font-bold">Currency Converter</h1>
+                <div className="flex gap-4">
+                    <a href="#home" className="hover:underline">Home</a>
+                    <a href="#about" className="hover:underline">About</a>
+                    <a href="#contact" className="hover:underline">Contact</a>
+                </div>
+            </div>
+        </nav>
 
-      
-      <div className="bg-white shadow-lg rounded-lg p-6 w-80 mt-6">
-        <input
-          type="number"
-          value={amount}
-          onChange={(e) => setAmount(e.target.value)}
-          className="w-full p-2 border rounded mb-4"
-        />
-        <div className="flex gap-4 mb-4">
-          <select
-            value={fromCurrency}
-            onChange={(e) => setFromCurrency(e.target.value)}
-            className="flex-1 p-2 border rounded"
-          >
-            {Object.keys(rates).map((currency) => (
-              <option key={currency} value={currency}>
-                {currency}
-              </option>
-            ))}
-          </select>
-          <select
-            value={toCurrency}
-            onChange={(e) => setToCurrency(e.target.value)}
-            className="flex-1 p-2 border rounded"
-          >
-            {Object.keys(rates).map((currency) => (
-              <option key={currency} value={currency}>
-                {currency}
-              </option>
-            ))}
-          </select>
+        <div className="bg-white shadow-lg rounded-lg p-6 w-80 mt-6">
+            <input
+                type="number"
+                value={amount}
+                onChange={(e) => setAmount(e.target.value)}
+                className="w-full p-2 border rounded mb-4"
+            />
+            <div className="flex gap-4 mb-4">
+                <select
+                    value={fromCurrency}
+                    onChange={(e) => setFromCurrency(e.target.value)}
+                    className="flex-1 p-2 border rounded"
+                >
+                    {Object.keys(rates).map((currency) => (
+                        <option key={currency} value={currency}>
+                            {currency}
+                        </option>
+                    ))}
+                </select>
+                <select
+                    value={toCurrency}
+                    onChange={(e) => setToCurrency(e.target.value)}
+                    className="flex-1 p-2 border rounded"
+                >
+                    {Object.keys(rates).map((currency) => (
+                        <option key={currency} value={currency}>
+                            {currency}
+                        </option>
+                    ))}
+                </select>
+            </div>
+            <div className="text-center text-xl font-semibold">
+                {amount} {fromCurrency} = {result} {toCurrency}
+            </div>
         </div>
-        <div className="text-center text-xl font-semibold">
-          {amount} {fromCurrency} = {result} {toCurrency}
-        </div>
-      </div>
     </div>
-  );
+);
 };
 
 export default CurrencyConverter;
