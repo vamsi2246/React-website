@@ -1,5 +1,6 @@
 import './App.css'
 import CurrencyConverter from './Components/CurrencyConverter'
+import Navbar from './Components/Navbar'
 
 function App() {
   
@@ -7,6 +8,7 @@ function App() {
   return (
     <>
     <CurrencyConverter />
+    {/* <Navbar /> */}
     </>
   )
 }

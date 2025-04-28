@@ -30,8 +30,20 @@ const CurrencyConverter = () => {
 
   return (
     <div className="flex flex-col items-center p-8 bg-gray-100 min-h-screen">
-      <h1 className="text-3xl font-bold mb-6">Currency Converter</h1>
-      <div className="bg-white shadow-lg rounded-lg p-6 w-80">
+
+      <nav className="w-full bg-blue-600 text-white p-4 shadow-md">
+        <div className="container mx-auto flex justify-between items-center">
+      <h1 className="text-xl font-bold">Currency Converter</h1>
+      <ul className="flex gap-4">
+            <li><a href="#home" className="hover:underline">Home</a></li>
+            <li><a href="#about" className="hover:underline">About</a></li>
+            <li><a href="#contact" className="hover:underline">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      
+      <div className="bg-white shadow-lg rounded-lg p-6 w-80 mt-6">
         <input
           type="number"
           value={amount}
