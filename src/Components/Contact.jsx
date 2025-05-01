@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div style={{
       minHeight: "100vh",
-      backgroundColor: "#f8fafc",
+      background: "linear-gradient(135deg, #6ee7b7 0%, #3b82f6 100%)",
       padding: "4rem 2rem",
       fontFamily: "'Inter', sans-serif"
     }}>
@@ -18,7 +18,7 @@ const Contact = () => {
       }}>
         {/* Left Column - Contact Form */}
         <div style={{
-          background: "white",
+          background: "linear-gradient(135deg, #ef4444 0%, #ec4899 100%)",
           padding: "3rem",
           borderRadius: "16px",
           boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
@@ -178,7 +178,7 @@ const Contact = () => {
           gap: "2rem"
         }}>
           <div style={{
-            background: "white",
+            background: "linear-gradient(135deg, #3b82f6 0%, #a3e635 100%)",
             padding: "2rem",
             borderRadius: "16px",
             boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)",

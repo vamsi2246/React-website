@@ -30,7 +30,7 @@ const App = () => {
     <div className="app-container">
       {/* Enhanced Navigation Bar */}
       <nav className="navbar" style={{
-        background: "white",
+        background: "#213448",
         padding: "1rem 2rem",
         boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
         display: "flex",
@@ -57,7 +57,7 @@ const App = () => {
             margin: 0,
             fontSize: "1.5rem",
             fontWeight: "700",
-            background: "linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%)",
+            background: "linear-gradient(90deg, #fff 0%, #e0e7ff 100%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent"
           }}>
@@ -65,17 +65,20 @@ const App = () => {
           </h1>
         </div>
 
+        {/* Nav links aligned to the right */}
         <ul style={{
           display: "flex",
           listStyle: "none",
           gap: "1.5rem",
           margin: 0,
-          padding: 0
+          padding: 0,
+          justifyContent: "flex-end",
+          alignItems: "center"
         }}>
           {[
-            { name: "home", label: "Home" },
-            { name: "about", label: "About" },
-            { name: "contact", label: "Contact" }
+            { name: "home", label: "Home", gradient: "linear-gradient(90deg, #6366f1 0%, #60a5fa 100%)" },      // Blue to light blue
+            { name: "about", label: "About", gradient: "linear-gradient(90deg, #f59e42 0%, #ec4899 100%)" },    // Orange to pink
+            { name: "contact", label: "Contact", gradient: "linear-gradient(90deg, #14b8a6 0%, #6ee7b7 100%)" } // Teal to light green
           ].map((item) => (
             <li key={item.name}>
               <button
@@ -84,28 +87,19 @@ const App = () => {
                   padding: "0.75rem 1.5rem",
                   fontSize: "1rem",
                   fontWeight: "600",
-                  color: activeButton === item.name ? "#6366f1" : "#64748b",
-                  background: "none",
+                  color: "#fff",
+                  background: activeButton === item.name
+                    ? item.gradient
+                    : "rgba(255,255,255,0.08)",
                   border: "none",
+                  borderRadius: "8px",
                   cursor: "pointer",
                   position: "relative",
+                  boxShadow: activeButton === item.name
+                    ? "0 2px 8px rgba(99,102,241,0.15)"
+                    : "none",
                   transition: "all 0.3s ease",
-                  ":hover": {
-                    color: "#6366f1"
-                  },
-                  "::after": {
-                    content: '""',
-                    position: "absolute",
-                    bottom: 0,
-                    left: 0,
-                    width: activeButton === item.name ? "100%" : "0",
-                    height: "3px",
-                    background: "#6366f1",
-                    transition: "width 0.3s ease"
-                  },
-                  ":hover::after": {
-                    width: "100%"
-                  }
+                  outline: activeButton === item.name ? "2px solid #fff" : "none"
                 }}
               >
                 {item.label}

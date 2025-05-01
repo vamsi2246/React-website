@@ -93,3 +93,52 @@ body, html {
   flex-direction: column;
   padding: 1rem;
 }
+
+:root {
+  --bg-main-light: #f5f5f5;
+  --bg-main-dark: #181a20;
+  --text-main-light: #222;
+  --text-main-dark: #f5f5f5;
+  --card-bg-light: #fff;
+  --card-bg-dark: #23272f;
+  --border-light: #e5e7eb;
+  --border-dark: #333;
+}
+
+.light-mode {
+  background: var(--bg-main-light);
+  color: var(--text-main-light);
+}
+
+.dark-mode {
+  background: var(--bg-main-dark);
+  color: var(--text-main-dark);
+}
+
+.light-mode .converter,
+.light-mode .graph {
+  background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+  color: #222;
+}
+
+.dark-mode .converter,
+.dark-mode .graph {
+  background: linear-gradient(135deg, #23272f 0%, #181a20 100%);
+  color: #f5f5f5;
+}
+
+.dark-mode input,
+.dark-mode select {
+  background: #23272f;
+  color: #f5f5f5;
+  border: 1px solid var(--border-dark);
+}
+
+.light-mode input,
+.light-mode select {
+  background: #fff;
+  color: #222;
+  border: 1px solid var(--border-light);
+}
+
+/* Add more as needed for other components */

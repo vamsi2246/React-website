@@ -4,14 +4,14 @@ const About = () => {
   return (
     <div style={{
       minHeight: "100vh",
-      backgroundColor: "#f8fafc",
+      background: "linear-gradient(135deg, #fbbf24 0%, #f87171 100%)",
       padding: "4rem 2rem",
       fontFamily: "'Inter', sans-serif"
     }}>
       <div style={{
         maxWidth: "1200px",
         margin: "0 auto",
-        background: "white",
+        background: "linear-gradient(135deg, #22c55e 0%, #fde047 100%)",
         padding: "3rem",
         borderRadius: "16px",
         boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
@@ -34,16 +34,6 @@ const About = () => {
           alignItems: "center",
           marginBottom: "3rem"
         }}>
-          <img 
-            src="https://img.freepik.com/free-vector/currency-transfer-abstract-concept-illustration_335657-2220.jpg" 
-            alt="Currency Exchange" 
-            style={{
-              width: "180px",
-              height: "180px",
-              objectFit: "contain",
-              marginBottom: "1.5rem"
-            }}
-          />
           <h1 style={{
             fontSize: "2.5rem",
             fontWeight: "700",
@@ -127,17 +117,7 @@ const About = () => {
           </div>
           
           <div>
-            <img 
-              src="https://img.freepik.com/free-vector/hand-drawn-currency-exchange-illustration_23-2149624786.jpg" 
-              alt="Currency Exchange" 
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                borderRadius: "12px",
-                boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)"
-              }}
-            />
+            
           </div>
         </div>
 
